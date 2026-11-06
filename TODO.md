@@ -13,17 +13,17 @@ Following the official Godot 4 tutorial: *Getting Started → Your first 2D game
 - [x] First commit
 
 ## 2. Creating the player scene
-- [ ] Create `Area2D` root named `Player`, lock child selection
-- [ ] Add `AnimatedSprite2D` with `walk` and `up` animations
-- [ ] Scale sprite to (0.5, 0.5)
-- [ ] Add `CollisionShape2D` with a `CapsuleShape2D`
-- [ ] Save as `player.tscn`
+- [x] Create `Area2D` root named `Player`, lock child selection
+- [x] Add `AnimatedSprite2D` with `walk` and `up` animations
+- [x] Scale sprite to (0.5, 0.5)
+- [x] Add `CollisionShape2D` with a `CapsuleShape2D`
+- [x] Save as `player.tscn`
 
 ## 3. Coding the player
-- [ ] Attach `player.gd`; add `speed` export and `screen_size`
+- [x] Attach `player.gd`; add `speed` export and `screen_size`
 - [ ] Add input actions: `move_left`, `move_right`, `move_up`, `move_down`
-- [ ] Implement movement in `_process()` with clamping to screen
-- [ ] Play/stop and flip animations based on direction
+- [x] Implement movement in `_process()` with clamping to screen
+- [x] Play/stop and flip animations based on direction
 - [ ] Add `hit` signal and `body_entered` handler
 - [ ] Add `start(pos)` function; hide player on ready
 
