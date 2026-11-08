@@ -24,7 +24,7 @@ Following the official Godot 4 tutorial: *Getting Started → Your first 2D game
 - [x] Add input actions: `move_left`, `move_right`, `move_up`, `move_down`
 - [x] Implement movement in `_process()` with clamping to screen
 - [x] Play/stop and flip animations based on direction
-- [ ] Add `hit` signal and `body_entered` handler
+- [x] Add `hit` signal and `body_entered` handler
 - [x] Add `start(pos)` function; hide player on ready
 
 ## 4. Creating the enemy
@@ -32,27 +32,27 @@ Following the official Godot 4 tutorial: *Getting Started → Your first 2D game
 - [x] Uncheck collision mask layer 1
 - [x] Add `AnimatedSprite2D` with `fly`, `swim`, `walk` animations (scale 0.75)
 - [x] Add `CollisionShape2D` (capsule)
-- [ ] Add `VisibleOnScreenNotifier2D`
+- [x] Add `VisibleOnScreenNotifier2D`
 - [x] Attach `mob.gd`: random animation on ready, free when off-screen
 - [x] Save as `mob.tscn`
 
 ## 5. The main game scene
-- [ ] Create `Node` root named `Main`; instance `Player`
-- [ ] Add `MobTimer` (0.5s), `ScoreTimer` (1s), `StartTimer` (2s, one shot)
-- [ ] Add `StartPosition` marker at (240, 450)
-- [ ] Add `MobPath` (`Path2D`) around the screen edge + `MobSpawnLocation` (`PathFollow2D`)
-- [ ] Attach `main.gd`: export `mob_scene`, `score` variable
-- [ ] Implement `game_over()` and `new_game()`
-- [ ] Connect timer signals; spawn mobs with random position, direction, velocity
-- [ ] Set Main as the main scene and test
+- [x] Create `Node` root named `Main`; instance `Player`
+- [x] Add `MobTimer` (0.5s), `ScoreTimer` (1s), `StartTimer` (2s, one shot)
+- [x] Add `StartPosition` marker at (240, 450)
+- [x] Add `MobPath` (`Path2D`) around the screen edge + `MobSpawnLocation` (`PathFollow2D`)
+- [x] Attach `main.gd`: export `mob_scene`, `score` variable
+- [x] Implement `game_over()` and `new_game()`
+- [x] Connect timer signals; spawn mobs with random position, direction, velocity
+- [x] Set Main as the main scene and test
 
 ## 6. Heads up display
-- [ ] Create `CanvasLayer` named `HUD`
-- [ ] Add `ScoreLabel`, `Message` label, `StartButton`, `MessageTimer`
-- [ ] Apply Xolonium font (size 64)
-- [ ] Attach `hud.gd`: `start_game` signal, `show_message()`, `show_game_over()`, `update_score()`
-- [ ] Instance HUD in Main and wire up signals
-- [ ] Clear old mobs on new game (`mobs` group)
+- [x] Create `CanvasLayer` named `HUD`
+- [x] Add `ScoreLabel`, `Message` label, `StartButton`, `MessageTimer`
+- [x] Apply Xolonium font (size 64)
+- [x] Attach `hud.gd`: `start_game` signal, `show_message()`, `show_game_over()`, `update_score()`
+- [x] Instance HUD in Main and wire up signals
+- [x] Clear old mobs on new game (`mobs` group)
 
 ## 7. Finishing up
 - [ ] Add `ColorRect` background

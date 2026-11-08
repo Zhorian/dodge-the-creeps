@@ -48,7 +48,7 @@ animations = [{
 "speed": 4.0
 }]
 
-[node name="Mob" type="RigidBody2D" unique_id=1992835636]
+[node name="Mob" type="RigidBody2D" unique_id=1992835636 groups=["mobs"]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
@@ -63,6 +63,6 @@ scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_jfba5")
 animation = &"walk"
 
-[node name="visibility" type="VisibleOnScreenEnabler2D" parent="." unique_id=425723286]
+[node name="visibility" type="VisibleOnScreenNotifier2D" parent="." unique_id=1696212824]
 
 [connection signal="screen_exited" from="visibility" to="." method="_on_visibility_screen_exited"]
