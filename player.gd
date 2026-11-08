@@ -1,4 +1,5 @@
 extends Area2D
+signal hit
 
 @export var speed: int # How fast the player will move (pixel/sec).
 
@@ -12,16 +13,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var velocity = Vector2() # The players movement vector.
+	var velocity = Vector2.ZERO # The players movement vector.
 
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
-		velocity.x += -1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
-		velocity.y += -1
+	if Input.is_action_pressed("move_up"):
+		velocity.y -= 1
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -40,3 +41,14 @@ func _process(delta: float) -> void:
 	elif velocity.y != 0:
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.flip_v = velocity.y > 0
+
+func _on_Player_body_entered(_body):
+	hide() # Player disappears after being hit
+	emit_signal("hit")
+	$CollisionShape2D.set_deferred("disabled", true)
+	
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+	

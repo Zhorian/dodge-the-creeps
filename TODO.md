@@ -21,20 +21,20 @@ Following the official Godot 4 tutorial: *Getting Started → Your first 2D game
 
 ## 3. Coding the player
 - [x] Attach `player.gd`; add `speed` export and `screen_size`
-- [ ] Add input actions: `move_left`, `move_right`, `move_up`, `move_down`
+- [x] Add input actions: `move_left`, `move_right`, `move_up`, `move_down`
 - [x] Implement movement in `_process()` with clamping to screen
 - [x] Play/stop and flip animations based on direction
 - [ ] Add `hit` signal and `body_entered` handler
-- [ ] Add `start(pos)` function; hide player on ready
+- [x] Add `start(pos)` function; hide player on ready
 
 ## 4. Creating the enemy
-- [ ] Create `RigidBody2D` root named `Mob`, gravity scale 0
-- [ ] Uncheck collision mask layer 1
-- [ ] Add `AnimatedSprite2D` with `fly`, `swim`, `walk` animations (scale 0.75)
-- [ ] Add `CollisionShape2D` (capsule)
+- [x] Create `RigidBody2D` root named `Mob`, gravity scale 0
+- [x] Uncheck collision mask layer 1
+- [x] Add `AnimatedSprite2D` with `fly`, `swim`, `walk` animations (scale 0.75)
+- [x] Add `CollisionShape2D` (capsule)
 - [ ] Add `VisibleOnScreenNotifier2D`
-- [ ] Attach `mob.gd`: random animation on ready, free when off-screen
-- [ ] Save as `mob.tscn`
+- [x] Attach `mob.gd`: random animation on ready, free when off-screen
+- [x] Save as `mob.tscn`
 
 ## 5. The main game scene
 - [ ] Create `Node` root named `Main`; instance `Player`
