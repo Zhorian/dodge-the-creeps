@@ -55,7 +55,7 @@ Following the official Godot 4 tutorial: *Getting Started → Your first 2D game
 - [x] Clear old mobs on new game (`mobs` group)
 
 ## 7. Finishing up
-- [ ] Add `ColorRect` background
-- [ ] Add `Music` and `DeathSound` `AudioStreamPlayer`s
-- [ ] Add `start_game` keyboard shortcut (Enter) to the button
-- [ ] Play through and commit the finished game
+- [x] Add `ColorRect` background
+- [x] Add `Music` and `DeathSound` `AudioStreamPlayer`s
+- [x] Add `start_game` keyboard shortcut (Enter) to the button
+- [x] Play through and commit the finished game
